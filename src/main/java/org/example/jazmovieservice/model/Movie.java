@@ -10,7 +10,7 @@ public class Movie {
     @Schema(description = "Movie ID", example = "12345")
     private Long id;
     @Schema(description = "Movie name", example = "The Movie")
-    private String name;
+    private String title;
     @Enumerated(EnumType.STRING)
     @Schema(description = "Movie category", example = "DOCUMENTARY")
     private Category category;
@@ -20,9 +20,9 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(Long id, String name, Category category, boolean isAvailable) {
+    public Movie(Long id, String title, Category category, boolean isAvailable) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.category = category;
         this.isAvailable = isAvailable;
     }
@@ -39,7 +39,7 @@ public class Movie {
     public String toString() {
         return "Movie{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + title + '\'' +
                 ", category=" + category +
                 ", isAvailable=" + isAvailable +
                 '}';
